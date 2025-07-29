@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Soluciones Informáticas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos específicos para la página de contacto */
+        .contact-form {
+            max-width: 600px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Soluciones Informáticas">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#vision-mision">Visión y Misión</a></li>
+                <li><a href="index.html#historia">Nuestra Historia</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contactos" class="section">
+            <div class="title-box">
+                <h1>Contacto</h1>
+            </div>
+            
+            <div class="team-grid">
+                <!-- Miembro 1 -->
+                <div class="team-card">
+                    <img src="img/jordanchiquitomeme.png" alt="Director General">
+                    <h3>Jordan Chiquito</h3>
+                    <p class="role">Director General</p>
+                    <div class="contact-info">
+                        <p><span class="icon">📧</span> chiquito@solucionesinfo.com</p>
+                        <p><span class="icon">📱</span> +593 96 361 0438</p>
+                    </div>
+                </div>
+                
+                <!-- Miembro 2 -->
+                <div class="team-card">
+                    <img src="img/Jarethmeme.png" alt="Jefe de Desarrollo">
+                    <h3>Jareth Macías</h3>
+                    <p class="role">Jefe de Desarrollo</p>
+                    <div class="contact-info">
+                        <p><span class="icon">📧</span> jareth@solucionesinfo.com</p>
+                        <p><span class="icon">📱</span> +593 96 905 7313</p>
+                    </div>
+                </div>
+
+            <div class="team-grid">
+                <!-- Miembro 3 -->
+                <div class="team-card">
+                    <img src="img/memejordan.png" alt="Programador FrontEnd">
+                    <h3>Jordan Laz</h3>
+                    <p class="role">Programador FrontEnd</p>
+                    <div class="contact-info">
+                        <p><span class="icon">📧</span> jordanlaz@solucionesinfo.com</p>
+                        <p><span class="icon">📱</span> +593 98 535 5749</p>
+                    </div>
+                </div>
+            <div class="team-grid">
+                <!-- Miembro 4 -->
+                <div class="team-card">
+                    <img src="img/Captura de pantalla 2024-10-11 191527.png" alt="Programdor BackEnd">
+                    <h3>Jesús Palma</h3>
+                    <p class="role">Programador BackEnd</p>
+                    <div class="contact-info">
+                        <p><span class="icon">📧</span> jesus@solucionesinfo.com</p>
+                        <p><span class="icon">📱</span> +593 98 788 1127</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="contact-form">
+                <h2>¿Necesitas ayuda personalizada?</h2>
+                <p>Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas.</p>
+                
+                <form id="formContacto">
+                    <input type="text" id="nombre" placeholder="Nombre completo" required>
+                    <input type="email" id="email" placeholder="Correo electrónico" required>
+                    <input type="tel" id="telefono" placeholder="Teléfono (opcional)">
+                    <textarea id="mensaje" placeholder="Describe tu proyecto o consulta..." required></textarea>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+                
+                <div id="confirmacion" style="display: none;">
+                    <div class="confirmation-box">
+                        <p>✅ <strong>¡Mensaje enviado con éxito!</strong></p>
+                        <p>Hemos recibido tu consulta y te contactaremos pronto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>Soluciones Informáticas</strong></p>
+            <p>Ofrecemos soporte técnico, redes y más.</p>
+            <p>📞 +593 96 905 7313 | 📍 Ecuador, Manta</p>
+        </div>
+        <p class="copyright">&copy; 2025 Soluciones Informáticas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Manejo del formulario
+        document.getElementById('formContacto').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Mostrar confirmación
+            document.getElementById('confirmacion').style.display = 'block';
+            
+            // Desplazarse a la confirmación
+            document.getElementById('confirmacion').scrollIntoView({ behavior: 'smooth' });
+            
+            // Resetear formulario después de 3 segundos
+            setTimeout(() => {
+                document.getElementById('formContacto').reset();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
